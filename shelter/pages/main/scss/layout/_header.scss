@@ -1,0 +1,84 @@
+header {
+    padding-top: 50px;
+    margin-bottom: -132px;
+    @include media-min-laptop {
+        padding-top: 20px;
+    }
+    // @include media-tablet {
+    //     padding-top: 20px;
+    // }
+    @include media-min-tablet {
+        padding-top: 19px;
+    }
+    @include media-mobile {
+        padding-top: 19px;
+    }
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            a {
+                text-decoration: none;
+                .logo__title {
+                    color: $color-primary;
+                    letter-spacing: .2rem;
+                    @extend %font-georgia;
+                    @include font($size: 3.2rem, $height: 115%);
+                }
+                .logo__subtitle {
+                    padding-left: 4.5px;
+                    color: $color-light;
+                    letter-spacing: .13rem;
+                    @extend %font-arial;
+                    @include font($size: 1.3rem, $height: 115%);
+                }
+            }
+            
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-evenly;
+            .navigation__link {
+                list-style: none;
+                padding-left: 35.6px;
+                @include media-min-laptop {
+                    padding-left: 36px;
+                    &:first-child {
+                        padding-left: 0px;
+                    }
+                }
+                padding-bottom: 5px;
+                letter-spacing: .0005rem;
+                @extend %font-arial;
+                @include font($size: 1.5rem, $height: 115%);
+            }
+            .link_active {
+                a {
+                    color: $color-link-active;
+                    text-decoration: none;
+                    @extend %link-bordered;
+                }
+            }
+            .link_no-active {
+                a {
+                    color: $color-link-no-active;
+                    text-decoration: none;
+                    transition: 0.5s ease;
+                    &:hover {
+                        @extend %link-bordered;
+                    }
+                }
+            }
+            // @include media-tablet {
+            //     display: none;
+            // }
+            @include media-min-tablet {
+                display: none;
+            }
+            @include media-mobile {
+                display: none;
+            }
+        }
+    }
+}

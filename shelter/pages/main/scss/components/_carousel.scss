@@ -1,0 +1,110 @@
+.swiper {
+    height: 440px;
+    position: relative;
+    overflow: visible !important;
+    top: 70px;
+    text-align: center;
+    margin: 0 auto;
+    width: 990px;
+    @include media-min-laptop {
+        width: 580px;
+        top: 70px;
+    }
+    @include media-min-tablet {
+        width: 270px;
+        top: 35px;
+        height: 650px;
+    }
+    // @include media-mobile {
+    //     top: 35px;
+    //     height: 505px;
+    // }
+}
+.swiper-wrapper {
+    text-align: center;
+    display: flex;
+    //max-height: 700px;
+    width: 990px;
+    margin: 0 auto;
+    justify-content: space-between;
+    transition: 2s;
+    overflow: hidden;
+    transition: 1s;
+    @include media-min-laptop {
+        width: 580px;
+        // top: 35px;
+        // height: 575px;
+    }
+    @include media-min-tablet {
+        width: 270px;
+        // top: 35px;
+        height: 650px;
+    }
+}
+
+
+
+// .slide-direction {
+//     display: flex;
+// }
+.swiper-slide {
+    //overflow: hidden;
+    //display: flex;
+    // flex-direction: column;
+    //flex: 0 0 33.33333333333% !important;
+    width: 270px !important;
+    height: 435px !important;
+    justify-content: space-between;
+    // justify-content: space-around;
+    margin-right: 90px;
+    background-color: $color-link-active;
+    border-radius: 9px;
+    transition: 1s;
+    @extend %card_interactive;
+    @include media-min-laptop { 
+        // flex: 0 0 50%; 
+        // max-width: 50%;
+        margin-right: 40px;
+    }
+    // @include media-tablet { 
+    //     flex: 0 0 95%; 
+    //     max-width: 90%;
+    // }
+    // @include media-min-tablet { 
+    //     flex: 0 0 95%; 
+    //     max-width: 90%;
+    // }
+    // @include media-mobile { 
+    //     flex: 0 0 95%; 
+    //     max-width: 90%;
+    // }
+}
+// .slider__item:first-child {
+//     margin-left: 9.0%;
+//     @include media-min-laptop {
+//         margin-left: 9.4%;
+//     }
+//     // @include media-tablet {
+//     //     margin-left: 5%;
+//     // }
+//     @include media-min-tablet {
+//         margin-left: 5%;
+//     }
+//     @include media-mobile {
+//         margin-left: 5%;
+//     }
+// }
+.slider__item > div {
+    text-align: center;
+}
+// .swiper-slide-duplicate {
+//     //opacity: 0.5;
+// }
+.animationLeft-js {
+    transition: 0.5s;
+    transform: translateX(-1500px);
+}
+.animationRight-js {
+    transition: 0.5s;
+    transform: translateX(3000px);
+}

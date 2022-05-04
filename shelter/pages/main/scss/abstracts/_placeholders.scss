@@ -1,0 +1,34 @@
+%font-georgia {
+    font-family: 'Georgia-Regular', Georgia, serif;
+}
+%font-georgia-italic {
+    font-family: 'Georgia-Italic', Georgia, serif;
+}
+%font-arial {
+    font-family: 'Arial-Regular', Helvetica, sans-serif;
+}
+%font-arial-italic {
+    font-family: 'Arial-italic', Helvetica, sans-serif;
+}
+%button-hovered {
+    background-color: $color-primary-light;
+    cursor: pointer;
+}
+%link-bordered {
+    color: $color-link-active;
+    border: 3px solid $color-primary;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 4px;
+}
+%card_interactive {
+    &:hover {
+        background-color: rgba(245, 240, 240, 0.562);
+        box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.08);
+        cursor: pointer;
+    }
+    &:hover .button_card {
+        background-color: $color-primary;
+    }
+}

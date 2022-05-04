@@ -1,0 +1,31 @@
+@mixin font($size, $height, $style: normal, $weight: 400) {
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+@mixin media-laptop {
+    @media (min-width: $laptop-width) {
+        @content;
+    }
+}
+@mixin media-min-laptop {
+    @media (min-width: $tablet-width) and (max-width: 1279px) {
+        @content;
+    }
+}
+// @mixin media-tablet {
+//     @media (min-width: 450px) and (max-width: 767px) {
+//         @content;
+//     }
+// }
+@mixin media-min-tablet {
+    @media (min-width: $mobile-small-width) and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin media-mobile {
+    @media (max-width: 319px) {
+        @content;
+    }
+}

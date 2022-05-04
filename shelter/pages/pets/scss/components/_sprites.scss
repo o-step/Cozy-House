@@ -1,0 +1,28 @@
+.list_icon {
+    width: 60px;
+    height: 60px;
+    fill: $color-primary;
+}
+.arrow-icon {
+    fill: $color-text-button;
+    width: 14px;
+    margin: 0 auto;
+}
+.card_icon {   
+    position: relative;
+    color:  $color-text-button;
+    width: 30px;
+    height: 23px;
+    @include media-min-tablet {
+        top: 11px;
+        left: 13px;
+    }
+}
+.footer_icon {
+    width: 40px;
+    fill: $color-primary;
+}
+.footer_icon-location {
+    width: 22px;
+    fill: $color-primary;
+}

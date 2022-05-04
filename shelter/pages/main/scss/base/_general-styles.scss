@@ -1,0 +1,148 @@
+html {
+    font-size: 10px;
+    margin: 0 auto;
+    background-color: $color-light;
+}
+body {
+    margin: 0 auto;
+    height: 100%;
+    padding: 0;
+}
+header, section, footer {
+    margin: 0 auto;
+    // @include media-laptop {
+    //     max-width: 1280px;
+    // }
+    // @include media-min-laptop {
+    //     max-width: 768px;
+    // }
+    // @include media-tablet {
+    //     max-width: 420px;
+    // }
+    @include media-min-tablet {
+        // max-width: 320px;
+        overflow: hidden;
+    }
+    @include media-mobile {
+        //max-width: 300px;
+        overflow: hidden;
+    }
+}
+h1 {
+    @include font($size: 4.4rem, $height: 130%);
+    // @include media-tablet {
+    //     @include font($size: 2.5rem, $height: 3.25rem);
+    // }
+    @include media-min-tablet {
+        @include font($size: 2.5rem, $height: 3.25rem);
+    }
+    @include media-mobile {
+        @include font($size: 2.5rem, $height: 3.25rem);
+    }
+}
+h3 {
+    @extend %font-georgia;
+    @include font($size: 3.5rem, $height: 130%);
+    // @include media-tablet {
+    //     @include font($size: 2.5rem, $height: 3.25rem);
+    // }
+    @include media-min-tablet {
+        @include font($size: 2.5rem, $height: 3.25rem);
+    }
+    @include media-mobile {
+        @include font($size: 2.5rem, $height: 3.25rem);
+    }
+}
+h4 {
+    @extend %font-georgia;
+    @include font($size: 2rem, $height: 115%);
+    // @include media-tablet {
+    //     @include font($size: 1.5rem, $height: 1.65rem);
+    // }
+    @include media-min-tablet {
+        @include font($size: 1.5rem, $height: 1.65rem);
+    }
+    @include media-mobile {
+        @include font($size: 1.5rem, $height: 1.65rem);
+    }
+
+}
+h5 {
+    @extend %font-georgia;
+    @include font($size: 1.5rem, $height: 110%);
+}
+.wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    @include media-min-laptop {
+        max-width: 708px;
+    }
+    // @include media-tablet {
+    //     max-width: 400px;
+    // }
+    @include media-min-tablet {
+        max-width: 300px;
+    }
+    @include media-mobile {
+        max-width: 319px;
+    }
+}
+.layout-2-column-promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-min-laptop {
+        display: flex;
+        flex-direction: column;
+    }
+    // @include media-tablet {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+    @include media-min-tablet {
+        display: flex;
+        flex-direction: column;
+    }
+    @include media-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+.layout-2-column-about {
+    padding-top: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-min-laptop {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    // @include media-tablet {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+    @include media-min-tablet {
+        display: flex;
+        flex-direction: column;
+    }
+    @include media-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+}
+.title {
+    position: relative;
+    max-width: 400px;
+    letter-spacing: 0.2rem;
+    color: $color-dark-head;
+}
+.pets__card-title {
+    @extend %font-georgia;
+    @include font($size: 2rem, $height: 2.3rem);
+    position: relative;
+    top: 5px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $color-dark-head;
+}

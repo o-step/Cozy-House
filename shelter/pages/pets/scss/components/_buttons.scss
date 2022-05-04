@@ -1,0 +1,84 @@
+button {
+    border: none;
+    border-radius: 100px;
+    padding: 15px 45px;
+    color: $color-text-button;
+    @include font($size: 1.7rem, $height: 110%);
+    @extend %font-georgia;
+    background: transparent;
+    transition: 1s;
+    &:hover {
+        @extend %button-hovered;
+    }
+    @include media-min-laptop {
+        padding: 15px 45px;
+    }
+}
+.promo__button {
+    position: relative;
+    top: 38px;
+    color: $color-text-button;
+    background-color: $color-primary;
+    border: none;
+    letter-spacing: 0.1rem;
+    transition: all 1s;
+    &:hover {
+        @extend %button-hovered;
+    }
+}
+.button_card {
+    position: relative;
+    top: 19px;
+    outline: 2px solid $color-primary;
+    box-sizing: border-box;
+    border-radius: 100px;
+    letter-spacing: 0.1rem;
+    &:hover {
+        outline: none;
+    }
+}
+.button_pets {
+    background-color: $color-primary;
+    border: none;
+    letter-spacing: 0.1rem;
+}
+.button_paginator_inactive {
+    border: 2px solid $color-link-no-active !important;
+    @extend %button-paginator;
+    @extend h4;
+    color: $color-link-no-active;
+    transition: 1s;
+    &:hover {
+        cursor: pointer;
+    }
+}
+// .button_paginator_active > span {
+    
+//     color: red;
+// }
+// #btn_nextPets {
+//     display: inline-block;
+//     margin-right: 10px;
+//     cursor: pointer;
+// }
+.button_paginator_active {
+    border: none;
+    background-color: $color-primary;
+    @extend %button-paginator;
+    @extend h4;
+    color: $color-text-button;
+    transition: 0.5s;
+}
+.button_paginator {
+    border: 2px solid $color-primary;
+    @extend %button-paginator;
+    @extend h4;
+    transition: 0.5s;
+    color: $color-text-button;
+    &:hover {
+        @extend %button-hovered;
+        border: none;
+        background-color: $color-primary-light;
+        
+    }
+}

@@ -1,0 +1,215 @@
+.footer {
+    display: block;
+    background-image: url("../../assets/images/footer-background.png");
+    background-image: url("../../assets/images/footer-gradient-background.png");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    @include media-min-laptop {
+        background-size: 100% 100%;
+    }
+    // @include media-tablet {
+    //     background-size: 100% 100%;
+    // }
+    @include media-min-tablet {
+        background-size: 100%;
+        background-size: cover;
+    }
+    @include media-mobile {
+        background-size: 100%;
+        background-size: cover;
+    }
+
+}
+.layout-3-column-footer {
+    
+    @include media-laptop {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        padding-bottom: 40px;
+    }
+    @include media-min-laptop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    // @include media-tablet {
+    //     display: block;
+    //     padding-top: 20px;
+    // }
+    @include media-min-tablet {
+        display: inline-block;
+    }
+    @include media-mobile {
+        display: inline-block;
+    }
+}
+.footer-contacts {
+    @include media-laptop {
+        position: relative;
+        margin-top: 23px;
+        width: 278px;
+        height: 234px;
+        margin-right: 160px;
+    }
+    @include media-min-laptop {
+        flex: 0 0 50%;
+        position: relative;
+        left: 34px;
+    }
+    // @include media-tablet {
+    //     display: block;
+    //     text-align: center;
+    //     padding-top: 5px;
+    // }
+    @include media-min-tablet {
+        display: block;
+        text-align: center;
+        padding-top: 5px;
+    }
+    @include media-mobile {
+        display: block;
+        text-align: center;
+        padding-top: 5px;
+    }
+    
+}
+.footer-locations {
+    @include media-laptop {
+        position: relative;
+        margin-top: 23px;
+        width: 302px;
+        height: 234px;
+        margin-right: 160px;
+    }
+    @include media-min-laptop {
+        position: relative;
+        flex: 0 0 50%;
+        left: 18px;
+    }
+    // @include media-tablet {
+    //     display: block;
+    //     text-align: center;
+    //     margin: 0 auto;
+    // }
+    @include media-min-tablet {
+        display: block;
+        text-align: center;
+        margin-top: -43px;
+    }
+    @include media-mobile {
+        display: block;
+        text-align: center;
+        margin-top: -43px;
+    }
+}
+.footer__title {
+    color: $color-light;
+    line-height: 130%;
+    @include media-min-laptop {
+        width: 280px;
+        letter-spacing: 0.21rem;
+    }
+    // @include media-tablet{
+    //     width: 250px;
+    //     letter-spacing: 0.01rem;
+    //     margin: 10px auto;
+    // }
+}
+.footer-mail, .footer-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -56px;
+    // @include media-tablet {
+    //     justify-content: center;
+    //     margin-top: -45px;
+    // }
+    @include media-min-tablet {
+        justify-content: center;
+        margin-top: -45px;
+    }
+} 
+.footer-phone {
+    margin-top: -78px;
+} 
+.footer__link {
+    letter-spacing: 0.06em;
+    color: $color-primary;
+    text-decoration: none;
+    padding-left: 20px;
+    @extend %font-georgia;
+    @include font($size: 2rem, $height: 115%);
+}
+.location-1, .location-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -56px;
+    // @include media-tablet {
+    //     justify-content: center;
+    //     margin-top: -38px;
+    // }
+    @include media-min-tablet {
+        justify-content: left;
+        margin-top: -38px;
+    }
+    @include media-mobile {
+        justify-content: left;
+        margin-top: -38px;
+    }
+} 
+.location-2 {
+    margin-top: -78px;
+    @include media-min-tablet {
+        margin-top: -75px;
+    }
+}
+.footer-image {
+    
+    @include media-laptop {
+        position: relative;
+        top: 39px;
+    }
+    @include media-min-laptop {
+        display: flex;
+        padding-top: 3px;
+    }
+    // @include media-tablet {
+    //     position: relative;
+    //     text-align: center;
+    //     justify-content: center;
+    // }
+    @include media-min-tablet {
+        position: relative;
+        top: -15px;
+        left: 20px;
+    }
+    img {
+        // @include media-tablet {
+        //     display: block;
+        //     margin: 0 auto;
+        //     width: 260px;
+        //     height: 269px;
+        // }
+        @include media-min-tablet {
+            display: block;
+            margin-bottom: -15px;
+            width: 260px;
+            height: 269px;
+        }
+        @include media-mobile {
+            display: block;
+            margin-bottom: -15px;
+            width: 260px;
+            height: 269px;
+        }
+    }
+}
+.location-1 {
+    a {
+        @include media-min-tablet {
+            margin-left: -6px;
+        }
+    }
+}

@@ -1,0 +1,233 @@
+.promo {
+    height: 908px;
+    background-image: url(../../assets/images/background.jpg);
+    background-image: url(../../assets/images/gradient-background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @include media-min-laptop {
+        height: 1195px;
+        background-size: 100% 100%;
+    }
+    @include media-min-tablet {
+        height: 855px;
+        background-size: 100%;
+        background-size: cover;
+    }
+    
+    .promo__wrapper {
+        .layout-2-column-promo {
+            padding-top: 105px;
+            @include media-min-laptop {
+                padding-top: 91px;
+            }
+            @include media-min-tablet {
+                padding-top: 106px;
+            }
+            .start-content {
+                width: 39%;
+                @include media-min-laptop {
+                    margin: 60px auto 0;
+                    width: 460px;
+                    height: 322px;
+                }
+                @include media-min-tablet {
+                    margin: 60px auto;
+                    width: 300px;
+                    height: 296px;
+                    text-align: center;
+                }
+                .promo__title {
+                    display: block;
+                    position: relative;
+                    color: $color-light;
+                    letter-spacing: 0.17rem;
+                    font-style: bold;
+                    @include media-min-tablet {
+                        letter-spacing: 0.25rem;
+                        font-style: bold;
+                    }
+                }
+                .promo__subtitle {
+                    display: block;
+                    position: relative;
+                    top: 10px;
+                    color: $color-link-no-active;
+                    @extend %font-arial;
+                    @include font($size: 1.5rem, $height: 160%);
+                    @include media-min-tablet {
+                        top: 21px;
+                    }
+                }
+            }
+            .puppy {
+                position: relative;
+                top: 76px;
+                @include media-min-laptop {
+                    top: 130px;
+                    left: 70px;
+                    img {
+                        width: 569px;
+                        height: 593px;
+                    }
+                }
+                @include media-min-tablet {
+                    top: 60px;
+                    left: 20px;
+                    img {
+                        width: 260px;
+                        min-height: 271.77px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#promo.active {
+    @include media-min-tablet {
+        background-image: url(../../assets/images/background.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transition: 0.5s;
+        z-index: 100;
+    }
+}
+section.active {
+    background-color: #292929c9;
+}
+#promo.active {
+    @include media-min-tablet {
+        // background-image: url(../../assets/images/background.jpg);
+        // background-image: url(../../assets/images/gradient-background.png);
+        // background-size: 100% 100%;
+        // background-size: cover;
+        //background-color: rgba(rgb(77, 34, 34), green, blue, 1);
+        // background-repeat: no-repeat;
+        // transition: 0.5s;
+        // z-index: 100;
+    }
+}
+#layout_2_column_promo.active {
+    @include media-min-tablet {
+        //display: none;
+        // background-color: aqua;
+        //width: 1000%;
+        // background-size: cover;
+
+    }
+}
+#navigation {
+    @include media-min-tablet {
+        transition: 1s;
+    }
+}
+#navigation.active {
+    @include media-min-tablet {
+        display: block;
+        transition: 1s;
+        transform: translateX(0%);
+        // margin: 60px auto 20px;
+        margin-top: 138px;
+        margin-right: 29px;
+    }
+}
+#header__navigation {
+    @include media-laptop {
+        display: none;
+    }
+    @include media-min-laptop {
+        display: none;
+    }
+    @include media-min-tablet {
+        display: none;
+    }
+    @include media-mobile {
+        display: none;
+    }
+}
+#header__navigation.active {
+    @include media-min-tablet {
+        z-index: 100;
+        display: block;
+        position: fixed;
+        //top: 150px;
+        //height: 855px;
+        height: 100%;
+        overflow-y: scroll;
+        list-style: none;
+        text-align: center;
+        margin: 0px auto;
+        text-align: center;
+        #link_active, #link_no_active_1, #link_no_active_2, #link_no_active_3 {
+            padding-bottom: 40px;
+            @include media-min-tablet {
+                //padding-top: 40px;
+                padding-bottom: 56px;
+                font-size: 3.2rem;
+                text-align: center;
+                margin-left: -45px;
+            }
+        } 
+    }
+}
+.background {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    height: 100vw;
+    width: 100%;
+    background-color: black;
+    transition: 1s;
+}
+.burger-block {
+    @include media-laptop {
+        display: none;
+    }
+    @include media-min-laptop {
+        display: none;
+    }
+    @include media-min-tablet {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        background-color: #292929;
+        padding-top: 120px;
+        overflow-y: scroll;
+        //transform: translateX(0px);
+        transition-duration: 2s;
+        transition-delay: 2s;
+        transition-property: margin-left;
+        // animation: slide-in;
+        transition: 2s;
+        // transform: translateX(-100%);
+    }
+}
+.logo-burger {
+    position: absolute !important;
+    top: 20px !important;
+    left: 10px;
+}
+.burger-block.active {
+    transition-delay: 1s;
+    // transition-property: margin-left;
+    // animation: slide-in;
+    transition: 1s;
+    overflow-y: scroll;
+    overflow-y: auto;
+    // transform: translateX(0px);
+}
+.noscroll {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.377);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+

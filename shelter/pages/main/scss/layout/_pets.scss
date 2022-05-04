@@ -1,0 +1,58 @@
+.pets {
+    background-color: $color-background;
+    height: 877px;
+    @include media-min-tablet {
+        height: 792px;
+    }
+    // @include media-tablet {
+    //     height: 691px;
+    // }
+}
+.pets__wrapper {
+    text-align: center;
+    @include media-laptop {
+        width: 1188px;
+        overflow: hidden;
+        height: 877px;
+    }
+    @include media-min-laptop{
+        width: 700px;
+        overflow: hidden;
+        height: 877px;
+    }
+    @include media-min-tablet{
+        width: 290px;
+        overflow: hidden;
+        //height: 877px;
+    }
+    
+}
+.pets__title {
+    top: 45px;   
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    // @include media-tablet {
+    //     width: 300px;
+    //     top: 20px;
+    //     letter-spacing: 0.135rem;
+    // }
+    @include media-min-tablet {
+        width: 300px;
+        top: 18px;
+        letter-spacing: 0.145rem;
+    }
+}
+.pets-button {
+    position: relative;
+    top: 122px;
+    @include media-min-laptop {
+        top: 126px;
+    }
+    // @include media-tablet{
+    //     top: 9px;
+    // }
+    @include media-min-tablet{
+        top: 9px;
+    }
+}

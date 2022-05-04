@@ -1,0 +1,130 @@
+button {
+    border-radius: 100px;
+    padding: 15px 45px;
+    color: $color-text-button;
+    @include font($size: 1.7rem, $height: 110%);
+    @extend %font-georgia;
+    background: transparent;
+    transition: all 1s;
+    &:hover {
+        @extend %button-hovered;
+    }
+    @include media-min-laptop {
+        padding: 17px 45px;
+    }
+}
+.promo__button {
+    position: relative;
+    top: 38px;
+    background-color: $color-primary;
+    border: none;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s;
+    &:hover {
+        @extend %button-hovered;
+    }
+    @include media-min-laptop {
+        display: block;
+        margin: 0 auto;
+    }
+    // @include media-tablet {
+    //     display: block;
+    //     margin: 0 auto;
+    // }
+    @include media-min-tablet {
+        top: 51px;
+    }
+}
+.swiper-button-prev, .swiper-button-next, .slider__control  {
+    top: 49%;
+    position: absolute !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 52px !important;
+    height: 52px !important;
+    text-align: center !important;
+    border: 2px solid $color-primary !important;
+    box-sizing: border-box !important;
+    border-radius: 100px !important;
+    transform: translateY(-50%)!important;
+    transition: all 1s ease!important;
+    &:hover {
+        @extend %button-hovered;
+        border: none;
+        outline: none;
+    }
+    @include media-min-laptop {
+        top: 50%;
+    }
+    @include media-min-tablet {
+        position: absolute;
+        top: 74%;
+    }
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: -100px;
+    right: auto;
+    @include media-min-laptop {
+    left: -60px;
+    right: auto;
+    }
+    @include media-min-tablet {
+        left: 42px;
+        right: auto;
+    }
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: -100px;
+    left: auto;
+    @include media-min-laptop {
+    right: -60px;
+    left: auto;
+    }
+    @include media-min-tablet {
+        right: 42px;
+        left: auto;
+    }
+}
+
+.slider__control_show {
+    display: flex;
+}
+.slider__control:hover,
+.slider__control:focus {
+    text-decoration: none;
+    &:hover {
+        @extend %button-hovered;
+        border: none;
+        outline: none;
+    }
+}
+
+.button_card {
+    position: relative;
+    top: 19px;
+    outline: 2px solid $color-primary;
+    box-sizing: border-box;
+    border-radius: 100px;
+    letter-spacing: 0.1rem;
+    border: none;
+    &:hover {
+        outline: none;
+    }
+}
+.button_pets {
+    
+    background-color: $color-primary;
+    border: none;
+    letter-spacing: 0.1rem;
+    @include media-laptop {
+        position: relative;
+        top: 5px;
+    }
+    @include media-min-tablet {
+        position: relative;
+        top: -75px;
+    }
+}

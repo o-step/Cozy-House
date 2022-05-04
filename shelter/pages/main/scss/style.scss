@@ -1,0 +1,29 @@
+//normalize
+@import "../../../assets/node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+//base
+@import 'base/fonts';
+@import 'base/normalize';
+@import 'base/general-styles';
+
+//components
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/popup';
+@import 'components/sprites';
+@import 'components/hamburger';
+
+//layout
+@import 'layout/about';
+@import 'layout/donation';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/help';
+@import 'layout/pets';
+@import 'layout/promo';

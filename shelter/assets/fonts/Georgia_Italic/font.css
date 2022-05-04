@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Georgia-Italic';
+  src: url('Georgia-Italic.ttf') format('truetype'),
+       url('Georgia-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia_Italic';
+  src: url('Georgia_Italic.eot');
+  src: url('Georgia_Italic.eot?#iefix') format('embedded-opentype'),
+       url('Georgia_Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

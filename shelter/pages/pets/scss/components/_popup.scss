@@ -1,0 +1,205 @@
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.5s;
+}
+.opacity {
+    opacity: 1;
+    transition: 0.5s;
+}
+.popup__body {
+    position: relative;
+    top: 10%;
+    width: 952px;
+    height: 552px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    // border: 2px solid black;
+    @include media-min-laptop {
+        width: 682px;
+        height: 402px;
+        top: 20%;
+        left: 20px;
+    }
+    @include media-min-tablet {
+        width: 271px;
+        height: 393px;
+        top: 20%;
+        left: 10px;
+    }
+}
+.popup__content {
+    position: absolute;
+    background-color: #fefefe;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    // border: 1px solid red;
+    width: 900px;
+    height: 500px;
+    z-index: 99999;
+    border-radius: 10px;
+    transition: 1s;
+    @include media-min-laptop {
+        width: 630px;
+        height: 350px;
+        //top: 20%;
+    }
+    @include media-min-tablet {
+        width: 240px;
+        height: 341px;
+    }
+}
+.popup__close {
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 890px;
+    top: 0px;
+    transition: 1s;
+    &:hover {
+        background-color: $color-primary-light;
+    }
+    @include media-min-laptop {
+        left: 621px;
+    }
+    @include media-min-tablet {
+        left: 218px;
+    }
+}
+.popup__vector {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    left: 38.46%;
+    right: 38.46%;
+    top: 38.46%;
+    bottom: 38.46%;
+    fill: #292929;
+}
+.popup__layout {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.popup__img img {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0px 0px 9px;
+    @include media-min-laptop {
+        width: 350px;
+        height: 350px;
+    }
+    @include media-min-tablet {
+        display: none;
+    }
+}
+.text__content {
+    position: absolute;
+    width: 341px;
+    height: 362px;
+    left: 549px;
+    top: 50px;
+    @extend %font-georgia;
+    @include media-min-laptop {
+        width: 260px;
+        height: 303px;
+        left: 361px;
+        top: 10px;
+    }
+    @include media-min-tablet {
+        text-align: center;
+        width: 220px;
+        height: 321px;
+        left: 10px;
+        top: 10px;
+    }
+}
+.scroll-hidden { 
+    overflow: hidden !important;
+}
+.popup__title {
+    @include font($size: 3.5rem, $height: 130%);
+    @include media-min-tablet {
+        @include font($size: 3.5rem, $height: 4.55rem);
+    }
+    @include media-mobile {
+        @include font($size: 2.5rem, $height: 3.25rem);
+    }
+}
+.subtitle {
+    position: relative;
+    display: inline;
+    top: 10px;
+    @include font($size: 2rem, $height: 2.3rem);
+    @include media-min-tablet {
+        @include font($size: 2rem, $height: 2.3rem);
+    }
+    @include media-mobile {
+        @include font($size: 2rem, $height: 2.3rem);
+    }
+}
+.popup__text {
+    position: relative;
+    top: 40px;
+    @include font($size: 1.5rem, $height: 1.65rem);
+    @include media-laptop {
+        letter-spacing: 0.045em;
+    }
+    @include media-min-laptop {
+        top: 20px;
+    }
+    @include media-min-tablet {
+        @include font($size: 1.3rem, $height: 1.43rem);
+        text-align: justify;
+        top: 30px;
+    }
+}
+.popup-list {
+    left: -40px;
+    position: relative;
+    top: 40px;
+    @include font($size: 1.5rem, $height: 1.65rem);
+    @include media-laptop {
+        top: 60px;
+    }
+    @include media-min-laptop {
+        top: 20px;
+    }
+    @include media-min-tablet {
+        top: 30px;
+        text-align: left;
+    }
+}
+.popup-point {
+    list-style-type: none;
+    position: relative;
+    padding-top: 11px;
+    white-space: nowrap;
+    @include font($size: 1.5rem, $height: 1.65rem);
+    @include media-min-laptop {
+        padding-top: 5px;
+    }
+    @include media-min-tablet {
+        padding-top: 3px;
+    }
+}
+.popup-point:before {
+    content: '\25CF';
+    padding-right: 10px;
+    color: $color-primary;
+}
